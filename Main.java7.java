@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int produccion, total = 0, horas = 0;
+
+        while (true) {
+
+            System.out.print("Producción de la hora (0 para terminar): ");
+
+            produccion = sc.nextInt();
+
+            if (produccion == 0) break;
+
+            if (produccion < 0) {
+
+                System.out.println("Dato inválido.");
+
+                continue;
+
+            }
+
+            total += produccion;
+
+            horas++;
+
+        }
+
+        System.out.println("Total producido: " + total);
+
+        System.out.println("Horas registradas: " + horas);
+
+        sc.close();
+
+    }
+
+}
